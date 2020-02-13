@@ -19,6 +19,7 @@ function delListElement(){
   let listItems = document.getElementsByTagName('li');
   if(listItems[itemToDelete] == undefined){
     alert("you must enter a number to delete");
+    document.getElementById('deletetextbox').value = "";
   } else {
     listItems[itemToDelete].parentNode.removeChild(listItems[itemToDelete]);
     document.getElementById('deletetextbox').value = "";
