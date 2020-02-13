@@ -1,0 +1,30 @@
+* {
+box-sizing: border-box;
+text-align: center;
+}
+
+ul {
+  /*no bullets in list*/
+  list-style: none;
+
+  /*changes cursor from text selection to finger*/
+  cursor: pointer;
+
+  padding: 0;
+  margins: 0;
+
+  /*makes it so that list items aren't highlighted upon 2X click*/
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+li {
+  background-color: #f2f2f2;
+  font-size: 20px;
+}
+
+li:nth-child(even) {
+  background-color: #f9f9f9;
+}

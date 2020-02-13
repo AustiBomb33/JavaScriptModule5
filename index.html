@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <h1>TODO List</h1>
+    <div class="">
+      <!--pressing enter on either text area will call the corresponding function-->
+      <input type="text" id="inputarea" placeholder="Enter your task here" onkeypress="checkKeyAdd()" tabindex="1">
+      <button type="button" id="addBtn" onclick="newListElement()">Add List Item</button>
+    </div>
+    <div class="">
+      <input type="text" id="deletetextbox" placeholder="Enter the position of an item to delete it" onkeypress="checkKeyDel()"tabindex="2">
+      <!--pressing enter on either text area will call the corresponding function-->
+      <button type="button" id="delBtn" onclick="delListElement()">Delete List Item</button>
+    </div>
+    <!--dummy input to allow pressing tab to navigate between 2 text areas-->
+    <input tabIndex=3 onfocus="document.getElementById('inputarea').focus()" style="position: relative; left: -100000px">
+
+    <ul id="list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+  </body>
+</html>
