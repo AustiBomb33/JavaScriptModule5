@@ -50,7 +50,7 @@ function checkKeyAdd() {
     // If the user has pressed enter
   if (key === 13) {
     newListElement();
-    vibrate(200);
+    window.navigator.vibrate(200);
   }
 }
 
@@ -60,7 +60,7 @@ function checkKeyDel() {
     // If the user has pressed enter
     if (key === 13) {
         delListElement();
-      vibrate(200);
+      window.navigator.vibrate(200);
     }
 }
 
