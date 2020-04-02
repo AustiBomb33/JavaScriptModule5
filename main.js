@@ -37,9 +37,9 @@ list.addEventListener("click", function(e){
 let listItems = document.getElementsByTagName("li");
 
 function clickEvent(e){
-  window.navigator.vibrate(200);
   if(e.target.style.textDecoration == ""){
     e.target.style.textDecoration = "line-through";
+    window.navigator.vibrate(200);
   } else {
     e.target.style.textDecoration = "";
   }
