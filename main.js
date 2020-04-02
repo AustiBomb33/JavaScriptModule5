@@ -26,7 +26,7 @@ function delListElement(){
   } else {
     listItems[itemToDelete].parentNode.removeChild(listItems[itemToDelete]);
     document.getElementById('deletetextbox').value = "";
-    window.navigator.vibrate(200);
+    //window.navigator.vibrate(200);
   }
 }
 
