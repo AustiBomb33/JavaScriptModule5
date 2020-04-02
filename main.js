@@ -10,6 +10,7 @@ function newListElement(){
   } else {
     document.getElementById('list').appendChild(newLI);
     document.getElementById('inputarea').value = "";
+    window.navigator.vibrate(200);
   }
 }
 
@@ -23,6 +24,7 @@ function delListElement(){
   } else {
     listItems[itemToDelete].parentNode.removeChild(listItems[itemToDelete]);
     document.getElementById('deletetextbox').value = "";
+    window.navigator.vibrate(200);
   }
 }
 
@@ -47,6 +49,7 @@ function checkKeyAdd() {
     // If the user has pressed enter
   if (key === 13) {
     newListElement();
+    window.navigator.vibrate(200);
   }
 }
 
@@ -56,5 +59,6 @@ function checkKeyDel() {
     // If the user has pressed enter
     if (key === 13) {
         delListElement();
+      window.navigator.vibrate(200);
     }
 }
