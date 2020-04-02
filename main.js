@@ -1,7 +1,4 @@
 navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
-if(navigator.vibrate){
-  prompt("Vibration should work");
-}
 // Create a new list item when clicking on the "Add" button
 function newListElement(){
   let newLI = document.createElement("LI");
@@ -39,7 +36,7 @@ list.addEventListener("click", function(e){
 let listItems = document.getElementsByTagName("li");
 
 function clickEvent(e){
-  //vibration(200);
+  vibration(200);
   if(e.target.style.textDecoration == ""){
     e.target.style.textDecoration = "line-through";
   } else {
@@ -66,6 +63,6 @@ function checkKeyDel() {
     }
 }
 
-// function vibration(time){
-//   window.navigator.vibrate(time);
-// }
+ function vibration(time){
+   window.navigator.vibrate(time);
+ }
