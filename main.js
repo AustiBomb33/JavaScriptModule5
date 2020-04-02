@@ -1,3 +1,5 @@
+navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+
 // Create a new list item when clicking on the "Add" button
 function newListElement(){
   let newLI = document.createElement("LI");
