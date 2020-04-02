@@ -37,7 +37,7 @@ list.addEventListener("click", function(e){
 let listItems = document.getElementsByTagName("li");
 
 function clickEvent(e){
-  vibrate(200);
+  vibration(200);
   if(e.target.style.textDecoration == ""){
     e.target.style.textDecoration = "line-through";
   } else {
@@ -64,6 +64,6 @@ function checkKeyDel() {
     }
 }
 
-function vibrate(time){
+function vibration(time){
   window.navigator.vibrate(time);
 }
