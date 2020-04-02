@@ -12,7 +12,6 @@ function newListElement(){
   } else {
     document.getElementById('list').appendChild(newLI);
     document.getElementById('inputarea').value = "";
-    window.navigator.vibrate(200);
   }
 }
 
@@ -26,7 +25,6 @@ function delListElement(){
   } else {
     listItems[itemToDelete].parentNode.removeChild(listItems[itemToDelete]);
     document.getElementById('deletetextbox').value = "";
-    //window.navigator.vibrate(200);
   }
 }
 
@@ -39,6 +37,7 @@ list.addEventListener("click", function(e){
 let listItems = document.getElementsByTagName("li");
 
 function clickEvent(e){
+  window.navigator.vibrate(200);
   if(e.target.style.textDecoration == ""){
     e.target.style.textDecoration = "line-through";
   } else {
