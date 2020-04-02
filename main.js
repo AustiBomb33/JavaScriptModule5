@@ -37,9 +37,9 @@ list.addEventListener("click", function(e){
 let listItems = document.getElementsByTagName("li");
 
 function clickEvent(e){
+  vibrate(200);
   if(e.target.style.textDecoration == ""){
     e.target.style.textDecoration = "line-through";
-    window.navigator.vibrate(200);
   } else {
     e.target.style.textDecoration = "";
   }
@@ -50,7 +50,7 @@ function checkKeyAdd() {
     // If the user has pressed enter
   if (key === 13) {
     newListElement();
-    window.navigator.vibrate(200);
+    vibrate(200);
   }
 }
 
@@ -60,6 +60,10 @@ function checkKeyDel() {
     // If the user has pressed enter
     if (key === 13) {
         delListElement();
-      window.navigator.vibrate(200);
+      vibrate(200);
     }
+}
+
+function vibrate(time){
+  window.navigator.vibrate(time);
 }
